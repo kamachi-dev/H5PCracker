@@ -5,3 +5,18 @@
 .red {
     background-color: red;
 }
+
+#guide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    color: white;
+}
+
+#output {}
+
+#output>p {
+    margin: 0px;
+}
