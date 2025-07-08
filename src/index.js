@@ -38,6 +38,13 @@ function parseContent(json) {
     }
 
     document.getElementById('output').innerHTML = out;
+
+    if (document.getElementById('jesus') == null) {
+        const jesus = document.createElement('img');
+        jesus.id = 'jesus';
+        jesus.src = 'images/jesus.png';
+        document.body.appendChild(jesus);
+    }
 }
 
 
