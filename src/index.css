@@ -44,4 +44,5 @@ p {
 
 body {
     background-image: linear-gradient(to right, black, rgb(50, 50, 50));
+    font-family: 'Roboto', sans-serif;
 }
