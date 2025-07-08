@@ -6,17 +6,42 @@
     background-color: red;
 }
 
+.green,
+.red {}
+
+h1 {
+    width: 100%;
+    background-color: gray;
+}
+
+h1,
+h3 {
+    color: white;
+}
+
+p {
+    width: fit-content;
+}
+
 #guide {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: gray;
+    border: 10px solid black;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
 }
 
-#output {}
+#output {
+    width: fit-content;
+}
 
 #output>p {
     margin: 0px;
+}
+
+body {
+    background-image: linear-gradient(to right, black, rgb(50, 50, 50));
 }

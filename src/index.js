@@ -7,7 +7,8 @@ function escapeHTML(str) {
         .replace(/</g, "&lt;")
         .replace(/>/g, "&gt;")
         .replace(/"/g, "&quot;")
-        .replace(/'/g, "&#39;");
+        .replace(/'/g, "&#39;")
+        .replace(/(\([^\(\)]+\))/g, "<i>$1</i>");
 }
 
 function parseContent(json) {
@@ -15,10 +16,11 @@ function parseContent(json) {
     let chapterCount = 0
     for (const chapter of json.chapters) {
         let questions = chapter.params.content[0].content.params.questions;
+        let chapterName = chapter.metadata.title;
         if (!questions) continue;
 
         chapterCount++;
-        out += `<h1>Chapter ${escapeHTML(chapterCount)}</h1>`
+        out += `<h1>Chapter ${escapeHTML(chapterCount)} : ${escapeHTML(chapterName)}</h1>`
 
         for (const question of questions) {
             let questiontxt = question.params.question;
